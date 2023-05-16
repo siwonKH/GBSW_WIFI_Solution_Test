@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="src/main.ts" defer></script>
+    <style>
+      body {
+        user-select: none;
+        overflow: hidden;
+      }
+      .logo.vite:hover {
+        filter: drop-shadow(0 0 2em #747bff);
+      }
+
+      .logo.typescript:hover {
+        filter: drop-shadow(0 0 2em #2d79c7);
+      }
+    </style>
+  </head>
+
+  <body oncontextmenu="return false;">
+    <div class="container">
+      <h1>Welcome to Tauri!</h1>
+
+      <div>
+        <img
+            src="src/assets/tauri.svg"
+            class="logo tauri"
+            alt="Tauri logo"
+        />
+      </div>
+
+      <div>
+        <button id="connect-button" type="button">Start</button>
+        <button id="disconnect-button" type="button">Stop</button>
+      </div>
+      
+      <h3></h3>
+      <p id="current-state">Service is OFF</p>
+      <!--<p id="connect-msg"></p>-->
+    </div>
+    <script>
+      // Prevent right-click event
+      window.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
