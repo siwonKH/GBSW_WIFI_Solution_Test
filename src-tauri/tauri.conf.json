@@ -16,7 +16,14 @@
       "shell": {
         "all": false,
         "open": true
+      }, "window": {
+        "close": true
       }
+    },
+    "systemTray": {
+      "iconPath": "icons/icon.ico",
+      "iconAsTemplate": true,
+      "menuOnLeftClick": false
     },
     "bundle": {
       "active": true,
@@ -39,7 +46,7 @@
         "installMode": "passive"
       },
       "endpoints": [
-        "https://gist.githubusercontent.com/siwonKH/9b6f06beab81040d56faa6392804a6ab/raw/c2fb9086c68e75bf8f5f01299fe7633b19b658c3/tauri-update.json"
+        "https://gist.githubusercontent.com/siwonKH/9b6f06beab81040d56faa6392804a6ab/raw"
       ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEY4MUUwODY0NTZFQUYyOTkKUldTWjh1cFdaQWdlK0E4TXk0SVdTd1h1VEFQT1R6bW5xNTBHbFZxSEROTmsvYVBTR1p4TDJ4RjQK"
@@ -48,10 +55,15 @@
       {
         "fullscreen": false,
         "resizable": false,
-        "title": "tauri-app",
-        "decorations": false,
         "width": 350,
-        "height": 500
+        "height": 500,
+        "title": "tauri-app",
+        "hiddenTitle": true,
+        "visible": false,
+        "decorations": false,
+        "transparent": false,
+        "focus": false,
+        "skipTaskbar": true
       }
     ]
   }
